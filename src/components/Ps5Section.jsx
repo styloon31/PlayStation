@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Star, Download } from "lucide-react";
+import { Star, Download, IndianRupee } from "lucide-react";
 import Button from "../components/Button";
 import AnimatedTitle from "../components/AnimatedTitle";
 
@@ -48,6 +48,24 @@ export default function Ps5Section() {
           <Button id="realm-btn" title="Discover More" containerClass="" />
         </div>
       </div>
+
+      {/* Accessories Section */}
+      <div id="accessories" className="max-w-7xl mx-auto mt-20">
+        <AnimatedTitle
+          title="Top <b>A</b>ccessories <br /> For Your PS5"
+          containerClass="text-left"
+        />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          {accessories.map((item) => (
+            <AccessoryCard key={item.id} item={item} />
+          ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Button id="realm-btn" title="Browse Accessories" containerClass="" />
+        </div>
+      </div>
     </div>
   );
 }
@@ -59,7 +77,7 @@ function GameCard({ game }) {
         <img
           src={game.image || "/placeholder.svg"}
           alt={game.title}
-          className="object-cover w-full h-full"
+          className="object-contain w-full h-full"
           width={300}
           height={200}
         />
@@ -73,10 +91,36 @@ function GameCard({ game }) {
           </div>
         </div>
         <div className="text-gray-400 text-sm mb-1">{game.category}</div>
-        {/* <div className="flex items-center text-[#ff3a8c]">
-          <Download className="w-4 h-4 mr-1" />
+        <div className="flex items-center text-[#ff3a8c]">
+          <IndianRupee className="w-4 h-4 mr-1" />
           <span className="text-sm">{game.downloads}</span>
-        </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AccessoryCard({ item }) {
+  return (
+    <div className="bg-[#1a1a1a] rounded-xl overflow-hidden transition-transform hover:scale-[1.02]">
+      <div className="relative h-48 overflow-hidden rounded-t-xl">
+        <img
+          src={item.image || "/placeholder.svg"}
+          alt={item.title}
+          className="object-contain w-full h-full"
+          width={300}
+          height={200}
+        />
+      </div>
+      <div className="p-4">
+        <h3 className="font-bold text-lg text-white font-general mb-2">
+          {item.title}
+        </h3>
+        <div className="text-gray-400 text-sm mb-2">{item.category}</div>
+        <div className="flex items-center text-[#ff3a8c]">
+          <IndianRupee className="w-4 h-4 mr-1" />
+          <span className="text-sm">{item.price}</span>
+        </div>
       </div>
     </div>
   );
@@ -85,66 +129,97 @@ function GameCard({ game }) {
 const games = [
   {
     id: 1,
-    title: "Fortnite",
-    category: "Sandbox",
+    title: "Tekken 8",
+    category: "Fighting",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "3000",
+    image: "/games/tekken8.jpg",
   },
   {
     id: 2,
-    title: "PubG",
-    category: "Battle S",
+    title: "Guardians of Galaxy",
+    category: "Action Adventure",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "1300",
+    image: "/games/gog.jpg",
   },
   {
     id: 3,
-    title: "Dota2",
-    category: "Steam-X",
+    title: "Alan Wake II",
+    category: "Survival Horror",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "3500",
+    image: "/games/alanwake2.jpg",
   },
   {
     id: 4,
-    title: "CS-GO",
-    category: "Legendary",
+    title: "Spider Man 2",
+    category: "Action Adventure",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "3000",
+    image: "/games/spiderman2.jpg",
   },
   {
     id: 5,
-    title: "Mini Craft",
-    category: "Legendary",
+    title: "W2K25",
+    category: "Sports",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "3800",
+    image: "/games/w2k25.jpg",
   },
   {
     id: 6,
-    title: "Eagles Fly",
-    category: "Matrix Games",
+    title: "Black Myth Wukong",
+    category: "Action RPG",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "4500",
+    image: "/games/bmwukong.jpg",
   },
   {
     id: 7,
-    title: "Warface",
-    category: "Max 3D",
+    title: "Call Of Duty Black Ops 6",
+    category: "Spy Action Thriller",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "4000",
+    image: "/games/blackops6.jpg",
   },
   {
     id: 8,
-    title: "Warcraft",
-    category: "Legend",
+    title: "Assassin's Creed Shadows",
+    category: "Action",
     rating: "4.8",
-    downloads: "2.3M",
-    image: "/placeholder.svg",
+    downloads: "4300",
+    image: "/games/acs.jpg",
+  },
+];
+
+const accessories = [
+  {
+    id: 1,
+    title: "DualSense Wireless Controller",
+    category: "Controller",
+    price: "4000",
+    image: "/accessories/ps5controller.jpeg",
+  },
+  {
+    id: 2,
+    title: "PS5 Skin",
+    category: "Skin",
+    price: "4000",
+    image: "/accessories/skin.jpeg",
+  },
+  {
+    id: 3,
+    title: "PS5 Camouflage",
+    category: "Controller",
+    price: "4500",
+    image: "/accessories/armyps5.jpeg",
+  },
+  {
+    id: 4,
+    title: "DualSense Charging Station",
+    category: "Charging",
+    price: "2990",
+    image: "/accessories/charging.jpg",
   },
 ];
