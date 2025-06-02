@@ -45,7 +45,7 @@ export default function Ps5Section() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button id="realm-btn" title="Discover More" containerClass="" />
+          {/* <Button id="realm-btn" title="Discover More" containerClass="" /> */}
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Ps5Section() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button id="realm-btn" title="Browse Accessories" containerClass="" />
+          {/* <Button id="realm-btn" title="Browse Accessories" containerClass="" /> */}
         </div>
       </div>
     </div>
@@ -72,57 +72,73 @@ export default function Ps5Section() {
 
 function GameCard({ game }) {
   return (
-    <div className="bg-[#1a1a1a] rounded-xl overflow-hidden transition-transform hover:scale-[1.02]">
-      <div className="relative h-48 overflow-hidden rounded-t-xl">
-        <img
-          src={game.image || "/placeholder.svg"}
-          alt={game.title}
-          className="object-contain w-full h-full"
-          width={300}
-          height={200}
-        />
-      </div>
-      <div className="p-4">
-        <div className="flex justify-between items-center">
-          <h3 className="font-bold text-lg text-white font-general">{game.title}</h3>
-          <div className="flex items-center">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
-            <span className="text-sm text-white">{game.rating}</span>
+    <a
+      href="https://wa.me/919999848456" // Replace with your actual WhatsApp number
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <div className="bg-[#1a1a1a] rounded-xl overflow-hidden transition-transform hover:scale-[1.02]">
+        <div className="relative h-48 overflow-hidden rounded-t-xl">
+          <img
+            src={game.image || "/placeholder.svg"}
+            alt={game.title}
+            className="object-contain w-full h-full"
+            width={300}
+            height={200}
+          />
+        </div>
+        <div className="p-4">
+          <div className="flex justify-between items-center">
+            <h3 className="font-bold text-lg text-white font-general">
+              {game.title}
+            </h3>
+            <div className="flex items-center">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
+              <span className="text-sm text-white">{game.rating}</span>
+            </div>
+          </div>
+          <div className="text-gray-400 text-sm mb-1">{game.category}</div>
+          <div className="flex items-center text-[#ff3a8c]">
+            <IndianRupee className="w-4 h-4 mr-1" />
+            <span className="text-sm">{game.downloads}</span>
           </div>
         </div>
-        <div className="text-gray-400 text-sm mb-1">{game.category}</div>
-        <div className="flex items-center text-[#ff3a8c]">
-          <IndianRupee className="w-4 h-4 mr-1" />
-          <span className="text-sm">{game.downloads}</span>
-        </div>
       </div>
-    </div>
+    </a>
   );
 }
 
 function AccessoryCard({ item }) {
   return (
-    <div className="bg-[#1a1a1a] rounded-xl overflow-hidden transition-transform hover:scale-[1.02]">
-      <div className="relative h-48 overflow-hidden rounded-t-xl">
-        <img
-          src={item.image || "/placeholder.svg"}
-          alt={item.title}
-          className="object-contain w-full h-full"
-          width={300}
-          height={200}
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="font-bold text-lg text-white font-general mb-2">
-          {item.title}
-        </h3>
-        <div className="text-gray-400 text-sm mb-2">{item.category}</div>
-        <div className="flex items-center text-[#ff3a8c]">
-          <IndianRupee className="w-4 h-4 mr-1" />
-          <span className="text-sm">{item.price}</span>
+    <a
+      href="https://wa.me/919999848456" // Replace with your actual WhatsApp number
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <div className="bg-[#1a1a1a] rounded-xl overflow-hidden transition-transform hover:scale-[1.02]">
+        <div className="relative h-48 overflow-hidden rounded-t-xl">
+          <img
+            src={item.image || "/placeholder.svg"}
+            alt={item.title}
+            className="object-contain w-full h-full"
+            width={300}
+            height={200}
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="font-bold text-lg text-white font-general mb-2">
+            {item.title}
+          </h3>
+          <div className="text-gray-400 text-sm mb-2">{item.category}</div>
+          <div className="flex items-center text-[#ff3a8c]">
+            <IndianRupee className="w-4 h-4 mr-1" />
+            <span className="text-sm">{item.price}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -217,9 +233,16 @@ const accessories = [
   },
   {
     id: 4,
-    title: "DualSense Charging Station",
-    category: "Charging",
-    price: "2990",
-    image: "/accessories/charging.jpg",
+    title: "Pink PS5 Controller",
+    category: "Controller",
+    price: "5000",
+    image: "/accessories/pink.jpeg",
+  },
+  {
+    id: 5,
+    title: "Red PS5 Controller",
+    category: "Controller",
+    price: "5000",
+    image: "/accessories/red.jpeg",
   },
 ];

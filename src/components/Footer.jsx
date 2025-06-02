@@ -9,13 +9,16 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-screen bg-[#5542ff] py-4 text-black">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
+    <footer className="w-screen bg-[#ff3a8c] py-4 text-black">
+      <div className="relative container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
         <p className="text-center text-sm font-light md:text-left">
-          ©Nova 2024. All rights reserved
+          ©Playstation Universe 2024. All rights reserved
+        </p>
+        <p className="absolute left-1/2 transform -translate-x-1/2">
+          Designed By BitsToBug
         </p>
 
-        <div className="flex justify-center gap-4  md:justify-start">
+        {/* <div className="flex justify-center gap-4  md:justify-start">
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -27,7 +30,7 @@ const Footer = () => {
               {link.icon}
             </a>
           ))}
-        </div>
+        </div> */}
 
         <a
           href="#privacy-policy"
