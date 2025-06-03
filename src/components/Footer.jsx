@@ -14,7 +14,7 @@ const Footer = () => {
         <p className="text-center text-sm font-light md:text-left">
           ©Playstation Universe 2024. All rights reserved
         </p>
-        <p className="absolute left-1/2 transform -translate-x-1/2">
+        <p className="">
           Designed By BitsToBug
         </p>
 
