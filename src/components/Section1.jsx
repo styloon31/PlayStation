@@ -93,9 +93,16 @@ const Hero = () => {
       )}
       <div
         id="video-frame"
-        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-black"
       >
-        <div>
+        <div className="md:hidden block w-full h-full relative">
+            <img 
+              src="/img/phonewp.jpg"
+              alt="playstation games"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="md:block hidden">
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVdClick}
@@ -158,7 +165,7 @@ const Hero = () => {
         </div>
       </div>
       <h1 className="special-font hero-heading absolute bottom-5 right-5  text-black">
-        G<b>a</b>ming
+        U<b>n</b>iverse
       </h1>
     </div>
   );
