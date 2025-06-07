@@ -213,7 +213,7 @@ export default function AboutPageS() {
             <Phone className="text-sky-400" />
             <div>
               <p>+91 9999848456</p>
-              <p></p>
+              <p>+91 9310679998</p>
             </div>
           </div>
         </div>
