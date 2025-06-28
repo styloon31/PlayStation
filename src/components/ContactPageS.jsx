@@ -43,8 +43,7 @@ export default function ContactPageS() {
               <div>
                 <h2 className="text-2xl font-bold mb-1">Store Address</h2>
                 <p className="text-gray-700">
-                  H-Store Locate at - F/505 , Sec -9, New Vijay Nagar, Ghaziabad
-                  Near Chanakya Chowk Ram Lila Ground
+                  H-Store Locate at, F/505, Sector 9, New Vijay Nagar, Sector 9, Vijay Nagar, Ghaziabad, Uttar Pradesh 201009, India
                 </p>
               </div>
             </div>
